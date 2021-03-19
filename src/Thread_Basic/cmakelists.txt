@@ -4,7 +4,10 @@ cmake_minimum_required(VERSION 2.6)
 # 项目名称
 project(Learn_Thread_Basic)
  
+file(GLOB_RECURSE variable [RELATIVE path] [FOLLOW_SYMLINKS] [globbingexpressions]...)
+file(GLOB_RECURSE SRC_FILES  ${CMAKE_CURRENT_SOURCE_DIR} *.cpp *.h)
+
 #以下三项必须填写一项
-add_executable(Learn_Thread_Basic main.cpp) 
+add_executable(Learn_Thread_Basic ${SRC_FILES}) 
 #add_library(common STATIC util.cpp) # 生成静态库
 #add_library(common SHARED util.cpp) # 生成动态库或共享库
